@@ -11,18 +11,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
+using SchemaDoc.UI.Areas.Identity.Data;
 
 namespace SchemaDoc.UI.Areas.Identity.Pages.Account
 {
     public class LoginWith2faModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<SchemaDocUser> _signInManager;
+        private readonly UserManager<SchemaDocUser> _userManager;
         private readonly ILogger<LoginWith2faModel> _logger;
 
         public LoginWith2faModel(
-            SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager,
+            SignInManager<SchemaDocUser> signInManager,
+            UserManager<SchemaDocUser> userManager,
             ILogger<LoginWith2faModel> logger)
         {
             _signInManager = signInManager;

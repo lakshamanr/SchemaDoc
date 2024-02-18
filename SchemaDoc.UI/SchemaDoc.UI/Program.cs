@@ -1,17 +1,22 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
+using SchemaDoc.UI.Areas.Identity.Data;
 using SchemaDoc.UI.Data;
+using Microsoft.AspNetCore.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("SchemaDocUIContextConnection") ?? throw new InvalidOperationException("Connection string 'SchemaDocUIContextConnection' not found.");
 
-builder.Services.AddDbContext<SchemaDocUIContext>(options =>
+builder.Services.AddDbContext<SchemaDocIdentityContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<SchemaDocUIContext>();
-
-// Add services to the container.
+builder.Services.AddDefaultIdentity<SchemaDocUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<SchemaDocIdentityContext>();
+ 
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -28,11 +33,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();;
-
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapRazorPages();
 app.Run();

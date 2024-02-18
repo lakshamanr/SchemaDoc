@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaDoc.DA", "SchemaDoc.DA\SchemaDoc.DA\SchemaDoc.DA.csproj", "{9ADDB574-0321-4B91-9149-BB1A414D1338}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaDoc.UI", "SchemaDoc.UI\SchemaDoc.UI\SchemaDoc.UI.csproj", "{D5E696C9-73CA-4B39-B3E2-F50416402603}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaDoc.API", "SchemaDoc.API\SchemaDoc.API\SchemaDoc.API.csproj", "{4F48F884-C8E9-4065-8651-1F62E709725C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaDoc.DM", "SchemaDoc.DM\SchemaDoc.DM\SchemaDoc.DM.csproj", "{C097E1C0-0F1D-42A9-AEC7-F15FFF69B5D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaDoc.Web", "SchemaDoc.Web\SchemaDoc.Web\SchemaDoc.Web.csproj", "{2DD39B43-A893-4517-A914-68DB5841B097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{9ADDB574-0321-4B91-9149-BB1A414D1338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADDB574-0321-4B91-9149-BB1A414D1338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADDB574-0321-4B91-9149-BB1A414D1338}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5E696C9-73CA-4B39-B3E2-F50416402603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5E696C9-73CA-4B39-B3E2-F50416402603}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5E696C9-73CA-4B39-B3E2-F50416402603}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5E696C9-73CA-4B39-B3E2-F50416402603}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F48F884-C8E9-4065-8651-1F62E709725C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F48F884-C8E9-4065-8651-1F62E709725C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F48F884-C8E9-4065-8651-1F62E709725C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{C097E1C0-0F1D-42A9-AEC7-F15FFF69B5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C097E1C0-0F1D-42A9-AEC7-F15FFF69B5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C097E1C0-0F1D-42A9-AEC7-F15FFF69B5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD39B43-A893-4517-A914-68DB5841B097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD39B43-A893-4517-A914-68DB5841B097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD39B43-A893-4517-A914-68DB5841B097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD39B43-A893-4517-A914-68DB5841B097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

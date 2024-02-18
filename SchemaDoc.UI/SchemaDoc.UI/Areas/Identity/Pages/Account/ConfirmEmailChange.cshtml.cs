@@ -10,15 +10,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using SchemaDoc.UI.Areas.Identity.Data;
 
 namespace SchemaDoc.UI.Areas.Identity.Pages.Account
 {
     public class ConfirmEmailChangeModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<SchemaDocUser> _userManager;
+        private readonly SignInManager<SchemaDocUser> _signInManager;
 
-        public ConfirmEmailChangeModel(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public ConfirmEmailChangeModel(UserManager<SchemaDocUser> userManager, SignInManager<SchemaDocUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
